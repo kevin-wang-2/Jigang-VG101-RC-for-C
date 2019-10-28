@@ -8,7 +8,6 @@ int main() {
 	scanf("%d", &x); // Input
 	if(x == 0) { printf("0 \n"); } // Process Boundary cases
 	else {
-		printf("0 ");
 		while(x > 0) { // Start to process a number
 			int curNumber = x;
 			int sum = 0, i = 0, digitCnt = getDigitCount(curNumber);
@@ -16,10 +15,12 @@ int main() {
 				sum += pow(curNumber % 10, digitCnt - i);
 				i++;
 				curNumber /= 10;
+				if(sum > x) continue;
 			}
 			if(sum == x) { printf("%d ", x); }
 			x--;
 		}
+		printf("0 ");
 		printf("\n");
 	}
 	return 0;
