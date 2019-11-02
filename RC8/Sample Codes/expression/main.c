@@ -31,7 +31,7 @@ int main() {
     int numtop = 0;
     char cur, last = 0;
     char stack[100], temp[100]; //Symbol stack and temp string
-    char stacktop = 0, temptop = 0; // Top pointer (can also be implemented by using pointers
+    int stacktop = 0, temptop = 0; // Top pointer (can also be implemented by using pointers
     while((cur = (char)getchar()) != '\n'){
 		if(cur == ' ') continue;
         if(cur == ')'){ // Proccess )
